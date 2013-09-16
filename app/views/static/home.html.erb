@@ -1,0 +1,18 @@
+<br/><br/>
+
+<!--<span>Expenses incurred this month: <%= @expenses_this_month_sum %></span>-->
+
+<br/><br/>
+
+<span class="align-left">What would you like to do now?? </span>
+<br/><br/>
+
+<%= link_to 'Create a new expensetype', new_expensetype_path, class: 'btn btn-primary'  %>  &nbsp; &nbsp;
+<%= link_to 'Record an expense', new_expense_path, class: 'btn btn-primary' %>
+
+<br/><br/>  <br/>
+<span class="align-left">You can also perform one of the following actions:</span>
+<br/><br/>
+
+<%= link_to 'Manage my expenses', expenses_url, class: 'btn' %>
+<%= link_to 'Manage my expensetypes', expensetypes_url, class: 'btn' %>

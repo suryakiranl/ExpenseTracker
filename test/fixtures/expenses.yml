@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  expensetype_id: 1
+  amount: 9.99
+  when: 2013-09-15
+
+two:
+  expensetype_id: 1
+  amount: 9.99
+  when: 2013-09-15

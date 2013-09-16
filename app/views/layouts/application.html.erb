@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expense Tracker</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="base-div" class="base-box">
+  <div id="toolbar-div" class="align-right">
+    <%= link_to 'My Dashboard', 'static_home', class: 'btn' %>
+    <%= link_to 'Home', 'static_index', class: 'btn' %>
+  </div>
+    <%= yield %>
+</div>
+</body>
+</html>

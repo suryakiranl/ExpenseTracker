@@ -1,0 +1,38 @@
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// Import bootstrap
+@import "bootstrap";
+
+// Custom CSS tags
+textarea  { height: 150px; }
+
+table { table-layout: fixed; width: 100% }
+
+td { word-wrap: break-word; }
+
+image { width: 24; height: 24 }
+
+div {
+  margin: 0 auto;
+}
+
+a {
+  background-color: #f2f2f2;
+}
+
+.base-box {
+  max-width: 800px;
+  padding: 20px;
+  text-align: center;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+

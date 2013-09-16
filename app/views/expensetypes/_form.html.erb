@@ -1,0 +1,27 @@
+<script type="text/javascript">
+    $('#toolbar-div').hide();
+</script>
+
+<%= form_for(@expensetype) do |f| %>
+  <% if @expensetype.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@expensetype.errors.count, "error") %> prohibited this expensetype from being saved:</h2>
+
+      <ul>
+      <% @expensetype.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :name %><%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :description %><%= f.text_area :description %>
+  </div>
+  <div>
+    <%= f.submit class: 'btn btn-primary' %>
+  </div>
+<% end %>
