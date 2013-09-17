@@ -1,18 +1,18 @@
 <br/><br/>
-<div class="align-right"><%= link_to 'Record an expense', new_expense_path, class: 'btn btn-primary' %></div>
+<div class="text-right"><%= link_to 'Record an expense', new_expense_path, class: 'btn btn-primary' %></div>
 
 <br/>
 <% if @expenses.empty? %>
     <p>There are no expenses recorded in the system yet. You can start by creating one.</p>
 <% else %>
 
-    <h3 class="align-left">Listing expenses</h3>
-    <p id="notice"><%= notice %></p>
+    <h3 class="text-left">Listing expenses</h3>
+    <p class="text-success"><%= notice %></p>
     <table class="table">
       <tr>
         <th colspan="4">Expensetype</th>
         <th colspan="2">Amount</th>
-        <th colspan="3">When</th>
+        <th colspan="2">When</th>
         <th colspan="2">Edit|Delete</th>
       </tr>
 
@@ -21,10 +21,10 @@
         <% expensetype = Expensetype.find(expense.expensetype_id) %>
         <td colspan="4"><%= expensetype.name %></td>
         <td colspan="2"><%= number_to_currency(expense.amount, precision: 2) %></td>
-        <td colspan="3"><%= expense.when %></td>
+        <td colspan="2"><%= expense.when %></td>
         <td colspan="2">
             <%= link_to image_tag("edit.png", alt: "Edit", size: "24x24"), edit_expense_path(expense) %>&nbsp;
-            <%= link_to image_tag("delete.png", alt: "Delete", size: "24x24"), expense, method: :delete, data: { confirm: 'Sure you wanna delete this expense?' } %>
+            <%= link_to image_tag("delete.png", alt: "Delete", size: "24x24"), expense, method: :delete, remote: true, class: 'delete_expense', data: { confirm: 'Sure you wanna delete this expense?' } %>
         </td>
       </tr>
     <% end %>

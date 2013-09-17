@@ -65,6 +65,7 @@ class ExpensesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to expenses_url, notice: 'Your expense is shredded!!' }
       format.json { head :no_content }
+      format.js { render :nothing => true }
     end
   end
 end

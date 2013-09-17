@@ -1,24 +1,24 @@
 <br/><br/>
-<div class="align-right"><%= link_to 'Add an Expensetype', new_expensetype_path, class: "btn btn-primary" %></div>
+<div class="text-right"><%= link_to 'Add an Expensetype', new_expensetype_path, class: "btn btn-primary" %></div>
 <br/>
 <% if @expensetypes.empty? %>
     <p>There are no expense types defined in the system now. You can start by creating one.</p>
 <% else %>
-    <h3>Existing Expensetypes:</h3>
-    <p id="notice"><%= notice %></p>
+    <h3 class="text-left">Existing Expensetypes</h3>
+    <p class="text-success"><%= notice %></p>
     <table class="table">
       <tr>
-        <th colspan="2">Name</th>
+        <th colspan="3">Name</th>
         <th colspan="6">Description</th>
         <th>Edit|Delete</th>
       </tr>
 
     <% @expensetypes.each do |expensetype| %>
       <tr>
-        <td colspan="2"><%= expensetype.name %></td>
+        <td colspan="3"><%= expensetype.name %></td>
         <td colspan="6"><%= expensetype.description %></td>
-        <td>
-            <%= link_to image_tag("edit.png", alt: "Edit", size: "24x24"), edit_expensetype_path(expensetype) %> &nbsp;
+        <td colspan="2">
+            <%= link_to image_tag("edit.png", alt: "Edit", size: "24x24"), edit_expensetype_path(expensetype) %>
             <%= link_to image_tag("delete.png", alt: "Delete", size: "24x24"), expensetype, method: :delete, :remote => true, :class => 'delete_expensetype', data: { :confirm => 'Sure you wanna delete this expensetype? CAUTION: All expenses of this type will be delete too.' } %>
         </td>
       </tr>

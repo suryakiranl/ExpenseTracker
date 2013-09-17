@@ -1,18 +1,35 @@
 <br/><br/>
 
-<!--<span>Expenses incurred this month: <%= @expenses_this_month_sum %></span>-->
+<% if expensetype_exists? %>
+    <% @exp_sum = sum_curr_month_expenses %>
 
-<br/><br/>
+    <h5>
+      <% if @exp_sum != 0 %>
+          <p class="text-info text-left"> Sum of all expenses incurred this month: <%= number_to_currency(@exp_sum, precision: 2) %> </p>
+      <% else %>
+          <p class="text-info text-left"> You do not have any expenses recorded for this month yet. </p>
+      <% end %>
+    </h5>
 
-<span class="align-left">What would you like to do now?? </span>
-<br/><br/>
+    <br/>
+    <div class="text-left">
+        <span>Would you like to : <br/>
+            <%= link_to 'Record an expense', new_expense_path, class: 'btn btn-primary' %>  &nbsp; &nbsp;
+            <%= link_to 'Create a new expensetype', new_expensetype_path, class: 'btn'  %>
+        </span>
+    </div>
+    <br/>
+    <div class="text-left">
+        <span>Or, you can also perform one of the following actions : <br/>
+            <%= link_to 'Manage my expenses', expenses_url, class: 'btn' %>  &nbsp; &nbsp;
+            <%= link_to 'Manage my expensetypes', expensetypes_url, class: 'btn' %>
+        </span>
+    </div>
+<% else %>
+    <div class="text-left">
+        Ah! We noticed that there are no expensetypes defined in the system. <br/>
+        Please create an expensetype to proceed using the system. <br/><br/>
+        <%= link_to 'Create a new expensetype', new_expensetype_path, class: 'btn btn-primary'  %>
+    </div>
+<% end %>
 
-<%= link_to 'Create a new expensetype', new_expensetype_path, class: 'btn btn-primary'  %>  &nbsp; &nbsp;
-<%= link_to 'Record an expense', new_expense_path, class: 'btn btn-primary' %>
-
-<br/><br/>  <br/>
-<span class="align-left">You can also perform one of the following actions:</span>
-<br/><br/>
-
-<%= link_to 'Manage my expenses', expenses_url, class: 'btn' %>
-<%= link_to 'Manage my expensetypes', expensetypes_url, class: 'btn' %>

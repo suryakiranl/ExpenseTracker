@@ -4,15 +4,13 @@
 
 <%= form_for(@expense) do |f| %>
   <% if @expense.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@expense.errors.count, "error") %> prohibited this expense from being saved:</h2>
-
-      <ul>
+    <div class="text-error">
+      <h6><%= pluralize(@expense.errors.count, "error") %> prohibited this expense from being saved:</h6>
       <% @expense.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+          <i class="icon-arrow-right"></i><%= msg %><br/>
       <% end %>
-      </ul>
     </div>
+    <br/>
   <% end %>
 
   <div class="field">

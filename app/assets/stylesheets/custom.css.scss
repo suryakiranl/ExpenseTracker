@@ -6,33 +6,29 @@
 @import "bootstrap";
 
 // Custom CSS tags
-textarea  { height: 150px; }
+body {
+  background-color: #f2f2f2;
+}
 
-table { table-layout: fixed; width: 100% }
+textarea  {
+  height: 150px;
+}
 
-td { word-wrap: break-word; }
+table {
+  table-layout: fixed;
+  width: 100%
+}
 
-image { width: 24; height: 24 }
+td {
+  word-wrap: break-word;
+}
 
 div {
   margin: 0 auto;
 }
 
-a {
-  background-color: #f2f2f2;
-}
-
 .base-box {
-  max-width: 800px;
+  max-width: 480px;
   padding: 20px;
   text-align: center;
 }
-
-.align-left {
-  text-align: left;
-}
-
-.align-right {
-  text-align: right;
-}
-
