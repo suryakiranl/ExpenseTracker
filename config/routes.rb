@@ -1,4 +1,4 @@
-TestApp1::Application.routes.draw do
+ExpenseTracker::Application.routes.draw do
 
   resources :expenses
 

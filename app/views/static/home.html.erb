@@ -6,6 +6,7 @@
     <h5>
       <% if @exp_sum != 0 %>
           <p class="text-info text-left"> Sum of all expenses incurred this month: <%= number_to_currency(@exp_sum, precision: 2) %> </p>
+          <%= image_tag(pie_chart_for_expenses_this_month, :alt => "Pie chart by expense type") %>
       <% else %>
           <p class="text-info text-left"> You do not have any expenses recorded for this month yet. </p>
       <% end %>

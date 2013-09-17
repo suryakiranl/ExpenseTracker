@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-TestApp1::Application.config.secret_token = 'bf7ec66975fd41072f035530921da98daf427570f03c9da3a39737213094e9bf3f0c2987d3d30ebbfb5042a4a7dbb4c29c06cf3894e85a58e29ef23ebf0e1ec6'
+ExpenseTracker::Application.config.secret_token = 'bf7ec66975fd41072f035530921da98daf427570f03c9da3a39737213094e9bf3f0c2987d3d30ebbfb5042a4a7dbb4c29c06cf3894e85a58e29ef23ebf0e1ec6'

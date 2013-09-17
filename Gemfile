@@ -22,6 +22,9 @@ gem 'jquery-rails', '3.0.4'
 # This is for bootstrap CSS
 gem 'bootstrap-sass', '2.3.2.2'
 
+# This gem is for google charts
+gem 'googlecharts', '1.6.8'
+
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
 end
