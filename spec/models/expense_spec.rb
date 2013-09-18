@@ -26,4 +26,15 @@ describe Expense do
 
     it { should_not be_valid }
   end
+
+  describe ' should round the amount to 2 digit precision ' do
+    before {
+      @expense.amount = 40.2455
+      @expense.save
+    }
+
+    it { @expense.amount.to_f.should == 40.25.to_f }
+  end
+
+
 end

@@ -26,5 +26,6 @@ gem 'bootstrap-sass', '2.3.2.2'
 gem 'googlecharts', '1.6.8'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 2.0'
+  gem 'capybara'
+  gem 'rspec-rails'
 end
